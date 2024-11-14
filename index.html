@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamster Store</title>
+    <link rel="stylesheet" href="deps/styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hamster Store</h1>
+
+        <div class="tabs">
+            <div class="tab active" data-tab="addHamsterTab">Add Hamster</div>
+            <div class="tab" data-tab="filterHamsterTab">Filter Hamsters</div>
+        </div>
+
+        <div id="addHamsterTab" class="tab-content active">
+            <div>
+                <h2>Add Hamster</h2>
+                <form id="hamsterForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" required></textarea>
+
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" required>
+
+                    <button type="submit">Add Hamster</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="filterHamsterTab" class="tab-content">
+            <div>
+                <h2>Filter Hamsters</h2>
+                <label for="minPrice">Min Price:</label>
+                <input type="number" id="minPrice">
+                
+                <label for="maxPrice">Max Price:</label>
+                <input type="number" id="maxPrice">
+
+                <button id="filterButton">Filter</button>
+            </div>
+        </div>
+
+        <div id="hamsterList">
+            <h2>Hamsters</h2>
+            <div id="hamsters"></div>
+        </div>
+    </div>
+
+    <script src="deps/js/hamsters.js"></script>
+</body>
+</html>
